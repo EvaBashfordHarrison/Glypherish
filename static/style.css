@@ -1,0 +1,101 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0; 
+    height: 100%;
+    font-family: monospace;
+    text-align: center;
+}
+
+/* h1 {
+    color: #ed244c;
+} */
+
+#header-banner img {
+    height: auto;      /* adjust to taste */
+    width: 99%;
+    margin: 20px 0;
+}
+
+label {
+    display: block;
+}
+
+input[type=text] {
+    width: 80%;
+    height: 60%; 
+    padding: 12px;
+    margin: 10px;
+    margin-top: 200px;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 1px solid #1b1b1b;
+    color: rgb(240, 234, 234);
+    background-color: #1d1c1c;
+}
+
+#container {
+    display: flex;
+    height: 100vh;
+}
+
+#left, 
+#right {
+    background: white;
+    
+    width: 50%;
+    height: 100%;
+    padding: 100px 30px 30px; /* top padding keeps content clear of the title */
+    overflow-y: auto;
+}
+
+#left {
+    background: #000;
+    color: #fff;
+}
+
+#right {
+    background: #fff;
+    color: #000;
+}
+
+/* title floats above both halves */
+#header-banner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    text-align: center;
+    pointer-events: none; /* clicks pass through to the page underneath */
+}
+
+#header-banner h1 {
+    margin: 20px 0;
+    color: #fff;
+    mix-blend-mode: difference; /* white on black, black on white */
+}
+
+#glyphs {
+    display: flex;
+    margin-top: 200px;
+    flex-wrap: wrap;   /* wraps onto a new line when it runs out of space */
+    gap: 8px;
+    align-items: center;
+}
+
+.glyph {
+    height: 60px;
+    width: auto;
+}
+
+.missing {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    border: 1px dashed #999;
+    color: #999;
+}

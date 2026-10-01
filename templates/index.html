@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Glypherish</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <div id="header-banner">
+        <img src="{{ url_for('static', filename='images/glypherish_logo.png') }}" alt="Glypherish">
+    </div>
+
+    <div id="container">
+        <div id="left">
+            <form id="textForm">
+                <label for="originText">Enter Text</label>
+                <input type="text" id="originText" name="originText" autocomplete="off">
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+
+        <div id="right">
+            <div id="glyphs"></div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
